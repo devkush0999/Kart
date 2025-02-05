@@ -20,14 +20,22 @@ target 'Kart' do
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :hermes_enabled => true,
+  ##################################
+  :fabric_enabled => true,          # ← Add this
+  :new_arch_enabled => true  
+
   )
+
+# Ensure Flipper-Folly version
+$FlipperFollyVersion = '2.6.10'  # MMKV requires ≤2.6.10
 
   pod 'ViroReact', :path => '../node_modules/@reactvision/react-viro/ios'
   pod 'ViroKit', :path => '../node_modules/@reactvision/react-viro/ios/dist/ViroRenderer/'
 
   # target 'KartTests' do 
-    inherit! :complete
+    # inherit! :complete
     # Pods for testing
     # end
 
