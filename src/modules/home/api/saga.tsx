@@ -12,7 +12,6 @@ function* fetchApiDataSaga():any {
        yield put(setData(data))
     } catch (error:any) {
         yield put(setError(error.message))
-        
     }
 }
 function* homeSaga(){

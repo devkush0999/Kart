@@ -6,9 +6,9 @@ import { store } from '../../store/store'
 const Home = () => {
   return (
     <View>
-      <Provider store={store}>
+      {/* <Provider store={store}> */}
       <Text>Home</Text>
-      </Provider>
+      {/* </Provider> */}
     </View>
   )
 }
